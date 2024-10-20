@@ -1,6 +1,7 @@
 # Sahelance Frontend
 
 This repository contains the frontend code for Sahelance, a freelance platform connecting freelancers and clients. The application is built using React, providing an intuitive and responsive user interface to enhance the user experience. Look [here](https://github.com/youcef-gaga/Backend-for-Freelance-Platform---Sahelance) for the back-end project.
+
 ![Database](image_1.png)
 ![Database](image_2.png)
 ![Database](image_3.png)
