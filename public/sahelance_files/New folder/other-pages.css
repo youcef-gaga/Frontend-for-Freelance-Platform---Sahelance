@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+:root {
+    --color-white: #ffffff;
+    --color-blue: #6102d3;
+    --color-pink: #fd356f;
+    --color-black: #000000;
+    --color-purple: #6102d3;
+    --color-peach: #ff895b;
+    --color-yellow: #f8db02;
+}
+:root {
+    --font-Poppins: "Poppins";
+}
+.banner-image {
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+}
+.about-col-one h5 {
+    font-size: 16px;
+    color: grey;
+}
+.inner-about-section p {
+    font-size: 14px;
+    line-height: 25px;
+}
+.inner-con {
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 16px;
+}
+.about-counter img {
+    width: 70%;
+}
+.freelance-join {
+    width: 55%;
+    margin: 61px auto!important;
+}
+.hire-btn,.join-btn {
+    background: #f9608e!important;
+}
+.freelance-join a {
+    margin: 0 11px;
+    font-weight: 500;
+}
+.faq-page a:hover {
+    color: #000!important
+}
+.accordian-samples a {
+    font-weight: 500;
+}
+.accordian-samples .accordion {
+    margin: 0!important;
+    padding: 0!important;
+}
+.accordian-samples {
+    margin-top: -30px!important;
+    background: #fff;
+    box-shadow: 0 14px 28px rgb(215 212 212 / 25%), 0 10px 10px rgb(195 192 192 / 22%);
+}
+.accordian-samples .accordion-item,.accordian-samples .accordion-button:not(.collapsed) {
+    border: none!important;
+    box-shadow: none!important;
+}
+.accordion-button {
+    border-bottom: 1px solid #edecec!important;
+}
+.banner-image {
+    background: #f3f3f3!important;
+}
+.fa-icons-service i {
+    font-size: 24px!important;
+    color: #fd356f;
+}
+.cols-inn .row {
+    --bs-gutter-x: 0rem;
+}
+.rowi i {
+    margin-top: 10px;
+    font-size: 19px;
+    padding: 16px 16px 15px 16px;
+    width: 70%;
+    vertical-align: middle!important;
+}
+.rowi h5 {
+    color: #444444;
+    font-size: 19px;
+    line-height: 30px;
+    font-weight: 400!important;
+}
+.rowi p,.loop-text p {
+    line-height: 27px;
+}
+.get-in-touch h5 {
+    font-weight: 400!important;
+}
+.join-now-button {
+    background: #6101d1;
+}
+.inner-service h4 {
+    width: 100%!important;
+}
+.contact_box .wpcf7 input[type=text],.contact_box .wpcf7 input[type=email],.contac_form textarea {
+    width: 100%!important;
+    font-size: 15px;
+    padding: 10px;
+    margin: 0 12px 23px 0;
+    height: auto;
+    float: left;
+    background-color: #f3f5fd;
+    border: none;
+}
+.contac_form {
+    border-radius: 20px;
+    filter: drop-shadow(0 0 12px rgba(41, 60, 151, 0.19));
+    background-color: #ffffff;
+}
+.contac_form input[type=submit] {
+    padding: 10px 20px;
+    color: #fff;
+    border: 1px solid var(--color-yellow1)!important;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: #f94078;
+    font-weight: 700;
+}
+.contac_form input[type=submit]:hover,.contact-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px 0 rgb(0 0 0 / 30%);
+    transition: 0.5s;
+}
+.contact-icon {
+    box-shadow: 0 10px 20px 0 rgb(0 0 0 / 30%);
+}

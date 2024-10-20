@@ -1,0 +1,316 @@
+/**
+ * Exoplanet Custom JS
+ *
+ * @package Exoplanet
+ *
+ * Distributed under the MIT license - http://opensource.org/licenses/MIT
+ */
+
+
+/* Mobile responsive Menu*/
+jQuery(function($){
+  var open_nav=document.getElementById("open_nav");
+  if(open_nav != null){
+    open_nav.addEventListener("click", open);
+    function open() {
+      document.getElementById("sidebar1").style.width = "250px";
+      document.getElementById("sidebar1").style.display = "block";
+    }
+  }
+  var close_nav= document.getElementById("close_nav");
+  if(close_nav != null){
+    close_nav.addEventListener("click", close);
+    function close() {
+      document.getElementById("sidebar1").style.width = "0";
+      document.getElementById("sidebar1").style.display = "none";
+    }
+  }
+});
+
+var interval=null;
+function show_loading_box()
+{
+  jQuery(".loading").css("display","none");
+  clearInterval(interval);
+}
+
+jQuery(document).ready(function() {
+
+   interval = setInterval(show_loading_box,1500);
+
+      jQuery('.counter').each(function () {
+      jQuery(this).prop('Counter',0).animate({
+      Counter: jQuery(this).text()
+      }, {
+      duration: 4000,
+      easing: 'swing',
+      step: function (now) {
+      jQuery(this).text(Math.ceil(now));
+}
+});
+});
+
+
+jQuery('#portfolios .owl-carousel').owlCarousel({
+      nav: false,
+      autoplay : true,
+      lazyLoad: true,
+      autoplayTimeout: 3000,
+      loop: true,
+      dots:true,
+        navText : ['<i class="fas fa-long-arrow-alt-left" aria-hidden="true"></i>','<i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>'],
+      items: 1,
+      lazyLoad: true,
+      responsive: {
+    0: {
+      items: 1,
+      stagePadding: 4
+    },
+    768: {
+      items: 2,
+      stagePadding: 90
+    },
+    1199: {
+      items: 1,
+      stagePadding: 403
+    },
+    1600: {
+      items: 1,
+      stagePadding: 100
+    },
+    1800: {
+      items: 3,
+      stagePadding: 100
+    },
+    1920: {
+      items: 1,
+      stagePadding: 598
+    },
+    2500: {
+      items: 2,
+      stagePadding: 625
+    }
+  }});
+
+
+var owl = jQuery('#trendingservices .owl-carousel');
+      owl.owlCarousel({
+      margin: 20,
+      nav:false,
+      autoplay : true,
+      lazyLoad: true,
+      autoplayTimeout: 5000,
+      loop: true,
+      dots: true,
+      autoplayHoverPause:true,
+        responsive: {
+        0: {
+          items: 1
+        },
+        500: {
+          items: 1
+        },
+        700: {
+          items: 2
+        },
+        767: {
+          items: 2
+        },
+        1000: {
+          items: 3
+        },
+        1920: {
+          items: 4
+        }
+      },
+      autoplayHoverPause : true,
+      mouseDrag: true
+    });
+
+var owl = jQuery('#latest_post .owl-carousel');
+    owl.owlCarousel({
+
+      stagePadding: 50,
+        margin: 20,
+        nav: true,
+        autoplay: true,
+        lazyLoad: true,
+        autoplayTimeout: 5000,
+        loop: true,
+        dots: true,
+        autoplayHoverPause: true,
+        navText: [''],
+        responsive: {
+            0: {
+                items: 1
+            },
+            500: {
+                items: 1
+            },
+            700: {
+                items: 1
+            },
+            767: {
+                items: 2
+            },
+            1000: {
+                items: 2
+            },
+            1200: {
+                items: 3
+            }
+
+        },
+        autoplayHoverPause: true,
+        mouseDrag: true
+    });
+
+var owl = jQuery('#hiredfreelancers .owl-carousel');
+    owl.owlCarousel({
+        margin: 20,
+        nav: true,
+        autoplay: true,
+        lazyLoad: true,
+        autoplayTimeout: 5000,
+        loop: true,
+        dots: true,
+        autoplayHoverPause: true,
+        navText: [''],
+        responsive: {
+        0: {
+          items: 1
+        },
+        500: {
+          items: 2
+        },
+        700: {
+          items: 2
+        },
+        767: {
+          items: 3
+        },
+        1000: {
+          items: 4
+        }
+        },
+        autoplayHoverPause: true,
+        mouseDrag: true
+    });
+
+
+ var owl = jQuery('#partners .owl-carousel');
+      owl.owlCarousel({
+      margin: 0,
+      nav:false,
+      autoplay : false,
+      lazyLoad: true,
+      autoplayTimeout: 5000,
+      loop: true,
+      dots: true,
+      autoplayHoverPause:true,
+      navText : ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+      responsive: {
+        0: {
+          items: 1
+        },
+        500: {
+          items: 2
+        },
+        600: {
+          items: 3
+        },
+        700: {
+          items: 3
+        },
+        900: {
+          items: 3
+        },
+        1000: {
+          items: 7
+        }
+      },
+      autoplayHoverPause : true,
+      mouseDrag: true
+    });
+
+});
+jQuery(document).ready(function() {
+
+  var counters = jQuery(".count");
+  var countersQuantity = counters.length;
+  var counter = [];
+
+  for (i = 0; i < countersQuantity; i++) {
+    counter[i] = parseInt(counters[i].innerHTML);
+
+  }
+
+  var count = function(start, value, id) {
+    var localStart = start;
+    setInterval(function() {
+      if (localStart < value) {
+        localStart++;
+        counters[id].innerHTML = localStart;
+      }
+    },100);
+  }
+
+  for (j = 0; j < countersQuantity; j++) {
+    count(0, counter[j], j);
+}
+
+
+
+});
+
+
+ // ------------ Scroll Top ---------------
+jQuery(window).scroll(function() {
+    if (jQuery(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+      jQuery('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+      jQuery('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+  });
+  jQuery('#return-to-top').click(function() {      // When arrow is clicked
+    jQuery('body,html').animate({
+      scrollTop : 0                       // Scroll to top of body
+    }, 2000);
+  });
+
+  jQuery(document).ready(function() {
+
+        // AOS.init();
+        AOS.init({
+            disable: function() {
+                var maxWidth = 800;
+                return window.innerWidth < maxWidth;
+            }
+        });
+
+    });
+
+jQuery(document).ready(function(){
+ var stickyon=jQuery('#vw-sticky-onoff').text().trim();
+  var a1=stickyon.length;
+  window.onscroll = function() {
+    if(a1==3){
+      myScrollNav();
+    }
+
+  }
+
+  var navbar = document.getElementById("site-sticky-menu");
+  var sticky = navbar.offsetTop;
+  function myScrollNav() {
+    // alert("Hii");
+    if (window.pageYOffset > sticky) {
+      //alert(window.pageYOffset);
+      navbar.classList.add("sticky");
+      navbar.classList.add("vw-menubar");
+    } else {
+      navbar.classList.remove("sticky");
+      navbar.classList.remove("vw-menubar");
+    }
+  }
+});
